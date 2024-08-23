@@ -1,0 +1,64 @@
+.todo-header {
+  border-bottom: 2px solid #1fa2ff;
+}
+
+.todo-header > h1 {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  color: transparent;
+  background: #1fa2ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #a6ffcb 25%,
+    #12d8fa,
+    #1fa2ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #a6ffcb 25%,
+    #12d8fa,
+    #1fa2ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 800;
+}
+
+.todo-content {
+  width: 1200px;
+  margin: 50px auto;
+}
+.input-box {
+  display: flex;
+  gap: 30px;
+}
+.input-box > input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #12d8fa;
+  flex-grow: 1;
+}
+
+.input-box > button {
+  background: #1fa2ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #a6ffcb,
+    #12d8fa,
+    #1fa2ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #a6ffcb,
+    #12d8fa,
+    #1fa2ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 200px;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10px;
+}

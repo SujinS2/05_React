@@ -1,0 +1,74 @@
+.hi {
+  color: red;
+  background-color: aquamarine;
+}
+
+.login-wrap {
+  width: 500px;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 50px;
+}
+
+.login-title {
+  margin: 0;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 30px;
+  color: #dadaff;
+}
+.login-wrap > .input-wrap {
+  padding: 10px;
+}
+
+.login-wrap > .input-wrap > * {
+  display: block;
+  padding: 5px;
+  width: 100%;
+}
+
+.login-wrap > .input-wrap > input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+}
+
+.login-btn {
+  padding: 10px;
+}
+
+.login-btn > input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 15px;
+  background-color: #ffdada;
+  color: #819;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.join-wrap {
+  border: 1px solid black;
+  width: 500px;
+  margin: 0 auto;
+}
+.join-wrap > table {
+  width: 100%;
+  margin: 0 auto;
+}
+.join-wrap > table tr > * {
+  padding: 10px;
+}
+
+.join-wrap > table tr > .info-name {
+  width: 35%;
+  text-align: left;
+  padding-left: 50px;
+}
+.join-wrap > table tr > .info-content > input:not([type="radio"]) {
+  width: 80%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #dadaff;
+}

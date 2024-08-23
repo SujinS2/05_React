@@ -6,20 +6,7 @@ function App() {
   const changeValue = (e) => {
     setText(e.target.value);
   };
-  const [todoList, setTodoList] = useState([
-    {
-      isLike: false,
-      todoContent: "자고싶어요",
-      regDate: "2024-08-21",
-      isDone: true,
-    },
-    {
-      isLike: true,
-      todoContent: "놀고싶어요",
-      regDate: "2024-08-22",
-      isDone: false,
-    },
-  ]);
+  const [todoList, setTodoList] = useState([]); //초기값을 비울때 주의 : 빈배열이어야함(빈문자열, 이런거 안됨 =>map 함수를 돌려야하기 때문)
   const addTodo = () => {
     const isLike = false;
     const todoContent = text;
@@ -60,13 +47,40 @@ function App() {
         </div>
         <div className="todo-list-wrap">
           {todoList.map((todo, index) => {
+            const like = () => {
+              const newArr = [...todoList];
+              newArr[index].isLike = !todoList[index].isLike;
+              setTodoList(newArr);
+            };
+            const done = () => {
+              todoList[index].isDone = true;
+              setTodoList([...todoList]);
+            };
+            // //삭제 1) splice 이용
+            // const deleteTodo = () => {
+            //   todoList.splice(index, 1);
+            //   setTodoList([...todoList]);
+            // };
+
+            //삭제 2)filter 이용
+            const deleteTodo = () => {
+              setTodoList(
+                todoList.filter((item) => {
+                  return item != todo;
+                })
+              );
+            };
             return (
               <ul key={"todo" + index} className="todo">
-                <li className="todo-like" onClick={like}>
+                <li className="todo-like">
                   {todo.isLike ? (
-                    <span className="material-icons">favorite</span>
+                    <span className="material-icons" onClick={like}>
+                      favorite
+                    </span>
                   ) : (
-                    <span className="material-icons">favorite_border</span>
+                    <span className="material-icons" onClick={like}>
+                      favorite_border
+                    </span>
                   )}
                 </li>
                 <li
@@ -79,9 +93,13 @@ function App() {
                   {todo.isDone ? (
                     ""
                   ) : (
-                    <span className="material-icons done">verified</span>
+                    <span className="material-icons done" onClick={done}>
+                      verified
+                    </span>
                   )}
-                  <span className="material-icons delete">backspace</span>
+                  <span className="material-icons delete" onClick={deleteTodo}>
+                    backspace
+                  </span>
                 </li>
               </ul>
             );

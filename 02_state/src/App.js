@@ -112,8 +112,9 @@ function App() {
   const changeObj = () => {
     //.객체 전개 연산자 사용법 : {...}
     //버튼클릭시 이름을 본인 이름으로 변경
-    obj3.name = "수진";
-    setObj3({ ...obj3 });
+    // obj3.name = "수진";
+    // setObj3({ ...obj3 });
+    setObj3({ ...obj3, name: "수진" }); //없으면 추가, 있으면 변경(객체 성질?)
   };
   return (
     <div className="App">

@@ -61,7 +61,6 @@ const ProductList = () => {
   const register = (product) => {
     setProductList([...productList, product]);
   };
-
   return (
     <div className="product-content">
       <div className="title">

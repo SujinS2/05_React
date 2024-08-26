@@ -1,0 +1,44 @@
+.header {
+  background: #7474bf; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #348ac7,
+    #7474bf
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #348ac7,
+    #7474bf
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 20px;
+}
+
+.header > div {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-logo > a {
+  font-size: 36px;
+  color: #fff;
+  font-weight: 900;
+}
+
+.link-box {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.link-box > a {
+  color: #fff;
+}
+.link-box > a:hover {
+  text-decoration: underline;
+}

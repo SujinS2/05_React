@@ -8,7 +8,7 @@ const TestComponent3 = () => {
   return (
     <div>
       <h3>이건 세번째 컴포넌트!</h3>
-      <p>이건 외부에서 쓴거야!</p>
+      <p>이건 외부에서 쓴거야?</p>
       <TestComponent4></TestComponent4>
     </div>
   );
